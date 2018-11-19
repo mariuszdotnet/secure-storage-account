@@ -4,3 +4,4 @@ This template creates an Azure Storage account and blob container.  The access t
 
 + Create storage account with access restrcited to selected virtual network subnets
 + Create Storage container (private)
++ Return Storage Account Name, Container Name and Storage Account Access Key

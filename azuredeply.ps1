@@ -3,6 +3,7 @@
 # The subscriptionId
 $subscriptionId = 'XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX'
 
+
 # Root path to script, template and parameters.  All have to be in the same folder.
 $rootPathToFiles = (Get-Item -Path ".\").FullName
 

@@ -33,7 +33,10 @@
             "type": "string"
         }
     },
-    "variables": {},
+    "variables": {
+        "resourceId": "[resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName'))]",
+        "apiVersion": "[providers('Microsoft.Storage', 'storageAccounts').apiVersions[0]]"
+    },
     "resources": [
         {
             "name": "[parameters('storageAccountName')]",
@@ -82,6 +85,10 @@
         "containerName": {
             "type": "string",
             "value": "[parameters('containerName')]"
+        },
+        "storageAccountKey": {
+            "type": "string",
+            "value": "[listKeys(variables('resourceId'), variables('apiVersion')).keys[0].value]"
         }
     }
 }
